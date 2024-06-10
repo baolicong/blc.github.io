@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人物介绍</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <style>
+        body .shell-main-nav ul .nav-box {
+            left: 360px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(248, 248, 248);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        body .shell-main-nav {
+            margin-bottom: 0;
+        }
+
+        .main {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 1430px;
+            overflow-x: hidden;
+            transform: translateY(0px);
+            background-color: #fff;
+            transition: .3s;
+            padding: 50px;
+            border: 1px solid #000;
+        }
+
+        .img {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('./image/2.jpg');
+            background-attachment: fixed;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .img::after {
+            content: '人物介绍';
+            width: 500px;
+            height: 200px;
+            border-radius: 3px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: #fff 10px solid;
+            color: #fff;
+            letter-spacing: 30px;
+            font: 100 70px 'font';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        /* -------------------------------------- */
+
+        .section-top {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+        }
+
+        .section-top-middle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-image: url('./image/lbt.jpg');
+            background-size: cover;
+            background-position-y: -30px;
+            margin: 0 50px;
+            border: 15px solid rgba(0, 0, 0, 0.151);
+        }
+
+        .section-top-left,
+        .section-top-right {
+            width: 300px;
+            height: 300px;
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+        .section-top-left {
+            text-align: right;
+        }
+
+        .section-top p {
+            font-size: 26px;
+            color: #22A39F;
+            margin: 5px 0;
+        }
+
+        .section-middle,
+        .section-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-bottom {
+            position: relative;
+        }
+
+        .section-middle-box {
+            width: 100%;
+            display: flex;
+            margin: 50px 0;
+        }
+
+        .section-middle-left {
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-middle-left span {
+            text-align: left;
+            color: rgb(241, 167, 167);
+            margin-top: 10px;
+        }
+
+        .section-middle-right {
+            width: 600px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-middle-right img {
+            width: 400px;
+        }
+
+        .section-middle-left span {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .Skills {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 40px 0;
+        }
+
+        .Skills li {
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 20px 0;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .Skills li span,
+        .Skills li p {
+            text-align: center;
+            font-size: 20px;
+            display: block;
+            width: 50%;
+            transition: .2s;
+            letter-spacing: 0px;
+        }
+
+        .Skills li p {
+            color: #22A39F;
+        }
+
+        .Skills li:hover p {
+            letter-spacing: 5px;
+        }
+
+        .Achievement {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Achievement-left {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        .Achievement-left h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .Achievement-left span {
+            font-size: 10px;
+        }
+
+        .Achievement-right {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            width: 450px;
+        }
+
+        .Achievement-right img {
+            width: 200px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            transition: .3s;
+        }
+
+        .Achievement-right img:hover {
+            transform: scale(1.1);
+        }
+
+        article {
+            display: flex;
+            justify-content: center;
+        }
+
+        aside {
+            width: 100%;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(240, 240, 224);
+            padding: 50px 0;
+        }
+        .bottom{
+            width: 1300px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        .bottom::after{
+            content: '《漱金》--------《浮游》--------《照海》--------《拈花》';
+            position: absolute;
+            top: -170px;
+            width: 100%;
+            text-align: center;
+            font: 300 40px '';
+        }
+        .bottom img{
+            width: 23%;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                    <img src="./image/logo.jpg" alt="">
+                    <span>BLCaini</span>
+                </div>
+                <ul>
+                    <li><a href="./index.html">主页</a></li>
+                    <li><a href="./photo.html">精美相册</a></li>
+                    <li><a href="./plot.html">剧情</a></li>
+                    <li><a href="./introduce.html">人物介绍</a></li>
+                    <li><a href="./Login.html">登录</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+            <div class="img"></div>
+            <div class="main">
+                <section>
+                    <div class="section-top">
+                        <div class="section-top-left">
+                            <p>名字；<br />桃夭</p>
+                            <br />
+                            <p>出生；<br />桃都</p>
+                            <br />
+                            <p><br /></p>
+                            <br />
+
+                        </div>
+                        <div class="section-top-middle">
+                        </div>
+                        <div class="section-top-right">
+                            <p>亲属/相关人</p>
+                            亲友团：磨牙、柳公子一家三口、叶逢君<br>
+                            好友：司狂澜、司静渊、苗管家
+                        </div>
+                    </div>
+                    <div class="section-middle">
+                        <h2 style="font-size: 30px; margin-top: 50px;">简介</h2>
+                        <span> &nbsp;&nbsp; 这是永远扎着两根粗细不一麻花辫的，穿着一身红衣的，有一身懒骨头，爱赌博也赢不了的桃夭，是桃都的桃夭。
+                            虽然是治妖不治人的鬼医，桃夭却常年滞留桃都，鲜少走动于江湖。
+                            桃夭与旧相识的叶逢君有过君子协议，桃夭给叶逢君“纸”，叶逢君把纸卖给妖怪。只要在这张纸上写上自己身份、病情和所在地，并焚烧，以上内容皆能告知桃夭。至于何时能得到医治，这要看桃夭心情缘分了。
+                            曾在金佛寺被毁时救过一个小和尚，并取名为磨牙。桃夭与柳公子约好，只要柳公子为桃夭做了一百件事，桃夭让柳公子把磨牙吃掉来增加修为。
+                            桃夭总会随身带着一个装满各种药的小布囊，手腕上有个不随走动而发声的金铃，但当金铃响起，便是他人死期。</span>
+                        <div class="section-middle-box">
+                            <div class="section-middle-left">
+                                <span></span>
+                            </div>
+                            <div class="section-middle-right">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="section-middle-box">
+                            <div class="section-middle-left">
+                                <span></span>
+                            </div>
+                            <div class="section-middle-right">
+                                <span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="section-middle-box" style="border-bottom:solid 1px #000; padding-bottom: 20px;">
+                            <div class="section-middle-left">
+                                <span></span>
+                            </div>
+                            <div class="section-middle-right">
+                                <span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <h2 style="font-size: 30px; margin: 30px 0;"></h2>
+                        <span></span>
+
+                        <div class="section-middle-box">
+                            <div class="section-middle-left">
+                                <span>简介<br>本名：磨牙<br>出身地区：金佛寺</span>
+                                <p>原本只是没有爹娘从小在金佛寺长大的孩子，本应过着无忧无虑生活的小和尚，却在某个夜晚失去了自己所有的亲人——金佛寺被毁，众僧皆亡。在漫天血气与烧焦的恶臭中，是桃夭将他从尸体堆中拉出来，并带回桃都，取名磨牙。
+                                    自从来到桃都，磨牙就再也没有长大了，身体至今没有任何变化。</p>
+                            </div>
+                            <div class="section-middle-right">
+                                <img src="./image/mo.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="section-middle-box">
+                            <div class="section-middle-right">
+                                <img src="./image/liu.jpg" alt="">
+                            </div>
+                            <div class="section-middle-left">
+                                <span>简介<br>本名：柳公子<br>出生地区：桃都</span>
+                                <p>生活在桃都的蛇妖，桃夭的邻居，想吃掉桃夭从金佛寺救出的和尚磨牙，为此与桃夭协定为桃夭做一百件事后将磨牙吃掉。</p>
+                            </div>
+                        </div>
+
+                        <h2 style="font-size: 30px; margin: 30px 0;"></h2>
+
+                        <div class="section-middle-box" style="border-bottom:solid 1px #000; padding-bottom: 40px;">
+                            <div class="section-middle-left" style="width: 100%;">
+                                <span>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <article>
+                    <div class="section-bottom">
+
+                        <h2 style="margin-top: 60px; color: #22A39F">Score</h2>
+                        <ul class="Skills" style="border-bottom:solid 1px #000; padding-bottom: 40px;">
+                            <li><span>Plot</span>
+                                <p>★★★★☆</p>
+                            </li>
+                            <li><span>character</span>
+                                <p>★★★★★</p>
+                            </li>
+                            <li><span>Rendering</span>
+                                <p>★★★★☆</p>
+                            </li>
+                            <li><span>Painter</span>
+                                <p>★★★★☆</p>
+                            </li>
+                            <li><span>color</span>
+                                <p>★★★★☆</p>
+                            </li>
+                            <li><span>performance</span>
+                                <p>★★★★★</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </article>
+                <aside>
+                    <h2 style="font-size: 30px; margin-top: 30px;">制作人员</h2><br />
+                    <span>
+                        <table border="1">
+                            <tr>
+                                <th>原著小说</th>
+                                <td>裟椤双树</td>
+                                <th>导演</th>
+                                <td>董易</td>
+                            </tr>
+                            <tr>
+                                <th>系列构成</th>
+                                <td>春日幽铃</td>
+                                <th>出品人</th>
+                                <td>李旎、李豪凌</td>
+                            </tr>
+                            <tr>
+                                <th>总制片人</th>
+                                <td>张圣晏、骆艳艳</td>
+                                <th>总监制</th>
+                                <td>朱贝宁</td>
+                            </tr>
+                            <tr>
+                                <th>总作画监督</th>
+                                <td>权恩京、李德镐</td>
+                                <th>制片人</th>
+                                <td>陈卿、王蓉</td>
+                            </tr>
+                            <tr>
+                                <th>联合制片人</th>
+                                <td>康君、康云康</td>
+                                <th>监制</th>
+                                <td>陈晓璐、黄思齐、杨璐</td>
+                            </tr>
+                            <tr>
+                                <th>音乐总监</th>
+                                <td>薄彩生</td>
+                                <th rowspan="2">人物设定</th>
+                                <td rowspan="2" >权恩京、白秦铉</td>
+                            </tr>
+                            <tr>
+                                <th>配音导演</th>
+                                <td>皇贞季</td>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                        </table>>
+                    </span>
+                    <p style="margin-top: 50px;font-size: 18px; color: #37373796;">
+                    </p>
+                </aside>
+            </div>
+            <div class="bottom">
+                <img src="./image/img/img (20).png" alt="">
+                <img src="./image/img/img (21).png" alt="">
+                <img src="./image/img/img (28).png" alt="">
+                <img src="./image/img/img (29).png" alt="">
+            </div>
+            <div class="shell-main-footer">
+                <span>版权所有-BLCaini</span>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            let top = window.scrollY
+            console.log(top)
+            if (top > 200) {
+                $('.main').css('transform', 'translateY(-300px)')
+            } else {
+                $('.main').css('transform', 'translateY(0%)')
+            }
+            // if (top > 650) {
+
+            // } else {
+
+            // }
+        })
+    </script>
+</body>
+
+</html>
